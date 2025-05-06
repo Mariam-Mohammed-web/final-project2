@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Final Project in Lvl 4</title>
+    <link rel="icon" type="image/x-icon" href="images/full/ai-application.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1> Image Processing App</h1>
+    <fieldset id="upload-section">
+        <legend><h2>Upload New Image</h2></legend>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="image" required accept="image/*"><br>
+            <button type="submit" class="submit-btn" id="upload-submit">
+                <span class="btn-text">Submit</span>
+            </button>
+        </form>
+    </fieldset>
+    <fieldset id="resize-section">
+        <legend><h2>Resize your Pics</h2></legend>
+        <form id="resize-form">
+            <label for="width">Width</label>
+            <input type="number" id="width" name="width" required min="1"><br>
+            <label for="height">Height</label>
+            <input type="number" id="height" name="height" required min="1"><br>
+            <button type="submit" class="submit-btn" id="resize-submit">
+                <span class="btn-text">Submit</span>
+            </button>
+        </form>
+    </fieldset>
+    <div id="result"></div><br><br>
+    <fieldset id="gallery-section">
+    <legend><h2>Gallery</h2></legend>
+    <div class="gallery" id="gallery">
+         <div id="empty-gallery" style="grid-column: 1 / -1; padding: 20px;">
+        No images available. Please upload some images.
+        </div>
+    </div>
+    </fieldset>
+
+    <script src="script.js"></script>
+</body>
+</html>
